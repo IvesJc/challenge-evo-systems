@@ -1,3 +1,4 @@
+import 'package:challenge_evo_systems/commom/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class SplashPage extends StatelessWidget {
@@ -12,8 +13,8 @@ class SplashPage extends StatelessWidget {
             gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-                colors: [Color(0xFF545151), Color(0xFF2b2a2a)])),
-        child: Image(image: AssetImage('assets/images/ivesflix.png')),
+                colors: AppColors.gradientColors)),
+        child: const Image(image: AssetImage('assets/images/ivesflix.png')),
       ),
     );
   }
