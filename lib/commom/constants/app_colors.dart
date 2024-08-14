@@ -12,4 +12,6 @@ class AppColors {
 
   
   static const Color white = Colors.white;
+  static const Color redLight = Color(0xFFE50914);
+  static const Color redDark = Color(0xFFB20710);
 }
