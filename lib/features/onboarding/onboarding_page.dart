@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:challenge_evo_systems/commom/constants/app_colors.dart';
 import 'package:challenge_evo_systems/commom/constants/app_text_styles.dart';
 import 'package:challenge_evo_systems/commom/widgets/primary_button.dart';
@@ -32,19 +34,24 @@ class OnboardingPage extends StatelessWidget {
                 ),
                 Text('will never be the same',
                     style: AppTextStyles.mediumTextWhite),
-                    
                 Padding(
                   padding: const EdgeInsets.fromLTRB(0, 40.0, 0, 15.0),
-                  child: PrimaryButton(
-                    text: 'Get Started',
-                    onPressed: () {
-                    }),
+                  child: PrimaryButton(text: 'Get Started', onPressed: () {}),
                 ),
-
-                Text('Already have an account? Login',
-                    style: AppTextStyles.minTextWhite),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('Already have an account? ',
+                        style: AppTextStyles.minTextWhite),
+                    GestureDetector(
+                      
+                      onTap: () => log('message'),
+                    child: Text(
+                      'Login',
+                      style: AppTextStyles.minTextWhiteSpan))
+                  ],
+                )
               ])))
     ]));
   }
 }
-

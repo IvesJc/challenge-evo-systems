@@ -29,5 +29,13 @@ class AppTextStyles {
     fontSize: 15.00,
     fontWeight: FontWeight.normal,
     color: AppColors.white
+  );  
+  static TextStyle minTextWhiteSpan = TextStyle(
+    fontFamily: 'Inter',
+    fontSize: 15.00,
+    fontWeight: FontWeight.normal,
+    color: AppColors.white,
+    decoration: TextDecoration.underline,
+    decorationColor: AppColors.white
   );
 }
