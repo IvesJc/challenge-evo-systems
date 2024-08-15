@@ -27,6 +27,7 @@ flutter:
   assets:
     - assets/images/ivesflix.png
     - assets/images/bg-netflix.jpg
+    - assets/images/bg-netflix2.jpg
   
   fonts:
     - family: Inter

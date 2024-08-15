@@ -13,7 +13,7 @@ class SplashPage extends StatelessWidget {
             gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-                colors: AppColors.gradientColors)),
+                colors: AppColors.bgGradientColors)),
         child: const Image(image: AssetImage('assets/images/ivesflix.png')),
       ),
     );
