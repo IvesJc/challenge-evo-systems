@@ -3,36 +3,36 @@ import 'package:challenge_evo_systems/commom/constants/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
 class PrimaryButton extends StatelessWidget {
-
-  final VoidCallback? onPressed; 
+  final VoidCallback? onPressed;
   final String text;
 
   const PrimaryButton({
-    super.key, this.onPressed, required this.text,
+    super.key,
+    this.onPressed,
+    required this.text,
   });
+
+  final BorderRadius _borderRadius =
+      const BorderRadius.all(Radius.circular(30));
 
   @override
   Widget build(BuildContext context) {
     return Material(
-      borderRadius: const BorderRadius.all(Radius.circular(38)),
+      borderRadius: _borderRadius,
       child: Ink(
-        decoration: const BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(38)),
-            gradient: LinearGradient(
+        height: 60,
+        width: 350,
+        decoration: BoxDecoration(
+            borderRadius: _borderRadius,
+            gradient: const LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
               colors: AppColors.redGradientColors,
             )),
         child: InkWell(
-          borderRadius: BorderRadius.all(Radius.circular(38)),
+          borderRadius: _borderRadius,
           onTap: onPressed,
-          child: Container(
-            height: 60,
-            width: 350,
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(38)),
-            ),
+          child: Align(
             child: Text(text,
                 style: AppTextStyles.smallTextWhite
                     .copyWith(color: AppColors.white)),
