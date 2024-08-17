@@ -12,7 +12,7 @@ class NowPlayingSlider extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: CarouselSlider.builder(
-        itemCount: 10,
+        itemCount: snapshot.data.length,
         options: CarouselOptions(
           height: 300,
           autoPlay: true,

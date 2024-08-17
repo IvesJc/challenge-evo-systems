@@ -1,4 +1,4 @@
-import 'package:challenge_evo_systems/features/home/home_screen.dart';
+import 'package:challenge_evo_systems/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
