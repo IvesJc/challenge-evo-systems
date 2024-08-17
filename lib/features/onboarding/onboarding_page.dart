@@ -1,7 +1,7 @@
 import 'dart:developer';
 
-import 'package:challenge_evo_systems/commom/constants/app_colors.dart';
 import 'package:challenge_evo_systems/commom/constants/app_text_styles.dart';
+import 'package:challenge_evo_systems/commom/widgets/backgroud.dart';
 import 'package:challenge_evo_systems/commom/widgets/primary_button.dart';
 import 'package:flutter/material.dart';
 
@@ -19,13 +19,7 @@ class OnboardingPage extends StatelessWidget {
             ),
           )),
       Expanded(
-          child: Container(
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: AppColors.bgGradientColors)),
+          child: BackgroudContainer(
               child: Column(children: [
                 const SizedBox(height: 50),
                 Text(
