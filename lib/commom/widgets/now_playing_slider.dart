@@ -16,7 +16,7 @@ class NowPlayingSlider extends StatelessWidget {
         options: CarouselOptions(
           height: 300,
           autoPlay: true,
-          viewportFraction: 0.6,
+          viewportFraction: 0.5,
           enlargeCenterPage: true,
           pageSnapping: true,
           autoPlayCurve: Curves.fastOutSlowIn,
