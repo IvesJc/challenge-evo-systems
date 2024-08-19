@@ -1,4 +1,6 @@
+import 'package:challenge_evo_systems/screens/all_movies_screen.dart';
 import 'package:challenge_evo_systems/screens/home/home_screen.dart';
+import 'package:challenge_evo_systems/screens/test.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'IvesFlix',
-      home: HomePage(),
+      home: MoviePage(),
     );
   }
 }
