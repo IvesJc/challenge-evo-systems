@@ -1,10 +1,11 @@
 import 'package:challenge_evo_systems/api/api.dart';
-import 'package:challenge_evo_systems/commom/constants/app_colors.dart';
 import 'package:challenge_evo_systems/commom/constants/app_text_styles.dart';
-import 'package:challenge_evo_systems/commom/widgets/backgroud.dart';
+import 'package:challenge_evo_systems/commom/widgets/background.dart';
+import 'package:challenge_evo_systems/commom/widgets/custom_app_bar_search.dart';
 import 'package:challenge_evo_systems/commom/widgets/now_playing_slider.dart';
 import 'package:challenge_evo_systems/commom/widgets/regular_slider.dart';
 import 'package:challenge_evo_systems/model/movie/movie.dart';
+import 'package:challenge_evo_systems/screens/search/search_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -31,16 +32,14 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: AppColors.backgroundColorDark,
-          elevation: 0,
-          title: Image(
-              image: AssetImage('assets/images/ivesflix.png'),
-              fit: BoxFit.cover,
-              height: 40,
-              filterQuality: FilterQuality.high),
+        appBar: CustomAppBarWithSearchIcon(
+          onSearchPressed: () {
+            Navigator.push(
+              context, 
+              MaterialPageRoute(builder: (context) => MovieSearchPage()),);
+          },
         ),
-        body: BackgroudContainer(
+        body: BackgroundContainer(
           child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           child: Padding(
