@@ -12,19 +12,19 @@ class VerticalSlider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    double screenWidth = MediaQuery.of(context).size.width;
+
+    int crossAxisCount = screenWidth > 600 ? 3 : 2;
+
     return SizedBox(
-      height: double.tryParse(snapshot.data.length.toString())! * 225,
+      height: snapshot.data.length * 225,
       width: double.maxFinite,
-      child:
-          // ListView.builder(
-          //   scrollDirection: Axis.horizontal,
-          //   shrinkWrap: true,
-          //   physics: BouncingScrollPhysics(),
-          GridView.builder(
+      child: GridView.builder(
         itemCount: snapshot.data.length,
-        gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 3,
-          childAspectRatio: 1,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: crossAxisCount,
+          childAspectRatio: 0.9,
         ),
         itemBuilder: (context, index) {
           return Padding(
@@ -47,7 +47,7 @@ class VerticalSlider extends StatelessWidget {
                   child: Image.network(
                     '${ApiConfigs.imageBaseUrl}${snapshot.data[index].posterPath}',
                     filterQuality: FilterQuality.high,
-                    fit: BoxFit.cover,
+                    fit: BoxFit.fitHeight,
                   ),
                 ),
               ),

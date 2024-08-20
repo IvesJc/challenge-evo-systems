@@ -10,6 +10,11 @@ class NowPlayingSlider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    double screenWidth = MediaQuery.of(context).size.width;
+    double itemWidth = 200; 
+    double viewportFraction = itemWidth / screenWidth;
+
     return SizedBox(
       width: double.infinity,
       child: CarouselSlider.builder(
@@ -17,7 +22,7 @@ class NowPlayingSlider extends StatelessWidget {
           options: CarouselOptions(
             height: 300,
             autoPlay: true,
-            viewportFraction: 0.5,
+            viewportFraction:  viewportFraction.clamp(0.3, 0.4),
             enlargeCenterPage: true,
             pageSnapping: true,
             autoPlayCurve: Curves.fastOutSlowIn,

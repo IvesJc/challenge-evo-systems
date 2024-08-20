@@ -72,4 +72,5 @@ class Api {
       throw Exception('Erro ao carregar filmes');
     }
   }
+
 }
