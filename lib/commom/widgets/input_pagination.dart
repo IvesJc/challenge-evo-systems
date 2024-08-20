@@ -23,7 +23,7 @@ class PageNumberInput extends StatelessWidget {
           child: TextField(
             controller: pageController,
             decoration: InputDecoration(
-              labelText: 'Número da página',
+              labelText: 'Page Number',
               labelStyle: AppTextStyles.minTextWhite,
               suffixIcon: IconButton(
                 icon: Icon(Icons.search),

@@ -18,7 +18,7 @@ class InputSearch extends StatelessWidget {
     return TextField(
       controller: controller,
       decoration: InputDecoration(
-        labelText: 'Pesquisar filme',
+        labelText: 'Search Movie',
         labelStyle: AppTextStyles.minTextWhite,
         suffixIcon: IconButton(
           icon: Icon(Icons.search, color: AppColors.white),
